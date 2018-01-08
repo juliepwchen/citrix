@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		
+  	    <meta name="author" content="Julie Chen">
+  		<meta name="description" content="Citrix Hachathon">
+  		
+  		 <title>Auto Time Log</title>
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="css/login.css">
+  		
+    </head>
+      
+    <body>
+   
+    <div ng-app="autoTimeLoggingApp" id="wrap">
+    
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <div style="border-radius: 8px; padding: 5px; font-family: Times New Roman; font-size: 15px; text-align: center; background-color:white; width:149px; height:34px; display: block;"><strong>Time Budget App</strong></div>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="">Home</a></li>
+          <li><a href="">Account</a></li>
+          <li><a href="">Setting</a></li>
+          <li><a href="">Help</a></li>
+          <li><div class="kandy-concierge-widget" data-kandy-domain-api-id="DAK6b090211f1d747e0b888559055c848df" data-concierge-to="5628963261" data-concierge-params="Hackathon"></div></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+        <li><a href="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+    </div>
+    </nav>
+
+    <div ng-view></div>
+    
+    <div class="row">
+    <div id="carouselDiv" class="col-md-12">
+    
+    <div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div style="padding: 40px 60px; border-radius: 35px; margin: auto; font-family: Times New Roman; color: black; font-size: 30px; text-align: center; background-color:#5FDFBF; width: 60%;; display: block;">
+      
+        <h1>Budget Your Time In The Same Way You Budget Your Monthly Expenses</h1>
+        
+        </div>
+      <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div style="padding: 40px 40px; border-radius: 35px; margin: auto; font-family: Times New Roman; color: black; font-size: 30px; text-align: center; background-color:#5FDFBF; width: 60%;; display: block;">
+      <h1>Aggregate Relevant Data From Multiple Products Seamlessly</h1></div>
+      
+      <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div style="padding: 40px 40px; border-radius: 35px; margin: auto; font-family: Times New Roman; color: black; font-size: 30px; text-align: center; background-color:#5FDFBF; width: 60%;; display: block;">
+      <h1>Set Time Budget Goals Easily</h1></div>
+      
+      <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  </div>
+  
+  </div></div>
+    
+    
+    </div>
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+   
+    <script src="autoTimeLoggingApp.js"></script>
+    <script src="Accounts/LoginController.js"></script>
+    <script src="Citrix/HybridTeamController.js"></script>
+    
+	<script> 
+	(function (k, a, n, d, y) { 
+	s = a.createElement(n); 
+	y = a.getElementsByTagName(n)[0]; 
+	s.async = 1; 
+	s.src = d; 
+	y.parentNode.insertBefore(s, y) 
+	})(window, document, 'script', '//www.kandy.io/javascripts/kandy/widgets/Concierge.js', 'kandy'); 
+	</script>
+		
+    </body>
+</html>

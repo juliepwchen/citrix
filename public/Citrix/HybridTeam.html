@@ -1,0 +1,229 @@
+<div class="container" ng-controller="HybridTeamController" ng-init="start()">
+  	<h2 id="budgetHeader">Time Budget Table <i>for Work</i></h2>
+  	<p class="budgetPara">Set budget goals on how much time you should spend on each category. </p>
+  	<p class="budgetPara"> Green shows 'Under Budget'. Red Shows 'Over Budget'. Yellow shows "Warning: Close to Budget'.</p>            
+  	
+  	<table class="table">
+    <thead>
+      <tr>
+        <th class="tableHeader" style="width:10%">Users</th>
+        <th class="tableHeader" style="width:90%">     
+      
+        <div id="tbAdd"><a href="#/hybridteam" data-toggle="modal" data-target="#basicModal"><span class="glyphicon glyphicon-plus"></span></a></div>
+               
+        </th>
+      
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td class="userName">
+        
+        <table>
+        <tr><td>
+        <div class="img">
+    	<img src="img/julie.jpg" alt="Julie" width="110" height="110">
+ 		 <div class="desc"><h4>Julie Chen</h4></div>
+		</div>
+		</td></tr>
+		
+        <tr><td>
+        <p>562-xxx-xxxx</p>
+        <p>999 Fair Oaks Blvd.</p>
+        <p>Citrus Height, CA 95610 </p>
+        <p>juliepwchen@gmail.com</p>
+        </td></tr>
+        </table>
+        </td>
+        
+        <td>
+        <table class="table">
+        <thead>
+        <tr>
+        <th class="tableHeader" style="width:2%">Product</th>
+        <th class="tableHeader" style="width:75%">
+        
+          
+        <div class='input-group date' id='datetimepicker6'>
+                <input id="inputDateTo" type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+         </div>
+         <div class='input-group date' id='datetimepicker7'>
+                <input id="inputDateTo" type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+         </div>
+         
+        
+        </th>
+        <th class="tableHeader" style="width:3%">Hours Spent</th>
+        <th class="tableHeader" style="width:3%">Hours Budget</th>
+        <th class="tableHeader" style="width:17%">Actions</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        <tr>
+        <td>
+          <strong>GoTo</strong> Meeting  
+        </td>
+        <td>
+  			  <div class="progress" style="height:20px">
+  				<div id="gtmeetingbar" class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="24" style="width:0%; background:#00CC00">
+  				</div>
+			  </div>
+			  
+	     </td>
+        <td>{{ timeSpentGTMeeting }}</td>
+        
+        <td> 
+			    <div class="input-group spinner">
+    			<input id="inputGTM" type="text" class="form-control" value="30">
+    			<div class="input-group-btn-vertical">
+      			<button id="upbuttonGTM" class="btn btn-default"><i class="fa fa-caret-up"></i></button>
+     			 <button id="downbuttonGTM" class="btn btn-default"><i class="fa fa-caret-down"></i></button>
+    			</div>
+ 			    </div>
+        </td>
+        <td>
+        
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicEditModal"><span class="glyphicon glyphicon-pencil"></span></a></div>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicDeleteModal"><span class="glyphicon glyphicon-trash"></span></a></div>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicRefreshModal"><span class="glyphicon glyphicon-refresh"></span></a></div>
+      
+        </td>
+      
+        </tr>
+        
+        <tr>
+        <td>
+          <strong>GoTo</strong> Webinar  
+        </td>
+        <td>
+  			  <div class="progress" style="height:20px">
+  				<div id="gtwebinarbar" class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="24" style="width:10%; background:#00CC00">
+  				</div>
+			  </div>
+			  
+	     </td>
+        <td>{{ timeSpentGTWebinar }}</td>
+        
+        <td> 
+			    <div class="input-group spinner">
+    			<input id="inputGTW" type="text" class="form-control" value="40">
+    			<div class="input-group-btn-vertical">
+      			<button id="upbuttonGTW" class="btn btn-default"><i class="fa fa-caret-up"></i></button>
+     			 <button id="downbuttonGTW" class="btn btn-default"><i class="fa fa-caret-down"></i></button>
+    			</div>
+ 			    </div>
+        </td>
+        <td>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicEditModal"><span class="glyphicon glyphicon-pencil"></span></a></div>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicDeleteModal"><span class="glyphicon glyphicon-trash"></span></a></div>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicRefreshModal"><span class="glyphicon glyphicon-refresh"></span></a></div>
+        </td>
+      
+        </tr>
+        
+        <tr>
+        <td>
+          <strong>Xen</strong> Desktop  
+        </td>
+        <td>
+  			  <div class="progress" style="height:20px">
+  				<div id="gttrainingbar" class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="24" style="width:60%; background:#00CC00">
+  				</div>
+			  </div>
+			  
+	     </td>
+        <td>18</td>
+        
+        <td> 
+			    <div class="input-group spinner">
+    			<input disabled type="text" class="form-control" value="30">
+    			<div class="input-group-btn-vertical">
+      			<button disabled class="btn btn-default"><i class="fa fa-caret-up"></i></button>
+     			 <button disabled class="btn btn-default"><i class="fa fa-caret-down"></i></button>
+    			</div>
+ 			    </div>
+        </td>
+        <td>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicEditModal"><span class="glyphicon glyphicon-pencil"></span></a></div>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicDeleteModal"><span class="glyphicon glyphicon-trash"></span></a></div>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicRefreshModal"><span class="glyphicon glyphicon-refresh"></span></a></div>
+        </td>
+      
+        </tr>
+        <tr>
+        <td>
+          <strong>GoTo</strong> Assist  
+        </td>
+        <td>
+  			  <div class="progress" style="height:20px">
+  				<div id="gttrainingbar" class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="24" style="width:90%; background:#FFCC00">
+  				</div>
+			  </div>
+			  
+	     </td>
+        <td>27</td>
+        
+        <td> 
+			    <div class="input-group spinner">
+    			<input disabled type="text" class="form-control" value="30">
+    			<div class="input-group-btn-vertical">
+      			<button disabled class="btn btn-default"><i class="fa fa-caret-up"></i></button>
+     			 <button disabled class="btn btn-default"><i class="fa fa-caret-down"></i></button>
+    			</div>
+ 			    </div>
+        </td>
+        <td>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicEditModal"><span class="glyphicon glyphicon-pencil"></span></a></div>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicDeleteModal"><span class="glyphicon glyphicon-trash"></span></a></div>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicRefreshModal"><span class="glyphicon glyphicon-refresh"></span></a></div>
+        </td>
+      
+        </tr>
+        
+        <tr>
+        <td>
+          <strong>GoTo</strong> Training  
+        </td>
+        <td>
+  			  <div class="progress" style="height:20px">
+  				<div id="gttrainingbar" class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="24" style="width:100%; background:#FF0000">
+  				</div>
+			  </div>
+			  
+	     </td>
+        <td>30</td>
+        
+        <td> 
+			    <div class="input-group spinner">
+    			<input disabled type="text" class="form-control" value="30">
+    			<div class="input-group-btn-vertical">
+      			<button disabled class="btn btn-default"><i class="fa fa-caret-up"></i></button>
+     			 <button disabled class="btn btn-default"><i class="fa fa-caret-down"></i></button>
+    			</div>
+ 			    </div>
+        </td>
+        <td>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicEditModal"><span class="glyphicon glyphicon-pencil"></span></a></div>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicDeleteModal"><span class="glyphicon glyphicon-trash"></span></a></div>
+        <div id="tbEdit"><a href="#/hybridteam" data-toggle="modal" data-target="#basicRefreshModal"><span class="glyphicon glyphicon-refresh"></span></a></div>
+        </td>
+      
+        </tr>
+        
+        
+        </tbody>
+        </table>
+        
+        </td>
+      </tr>
+    </tbody>
+  	</table>
+</div>

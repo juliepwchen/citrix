@@ -1,0 +1,175 @@
+body {
+  padding-top: 5px;
+  padding-bottom: 40px;
+  background-color: #000000;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 60%;
+      margin: auto;
+}
+#myCarousel {
+	background-color: #000000;
+}
+#inputLabel, .form-signin-heading {
+    color: #FFFFFF;	
+}
+
+label {
+    display:block;
+}
+
+#budgetHeader {
+  color: #C6C6C6;
+  font-family: "Times New Roman", Georgia, Serif;	
+}
+.budgetPara {
+	color: #8F8F8F;
+}
+.tableHeader {
+    color: #8F8F8F;	
+}
+.userName {
+	color: #8F8F8F;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.spinner {
+  width: 45px;
+}
+.spinner input {
+  text-align: right;
+}
+.input-group-btn-vertical {
+  position: relative;
+  white-space: nowrap;
+  width: 1%;
+  vertical-align: middle;
+  display: table-cell;
+}
+.input-group-btn-vertical > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 6px;
+  margin-left: -1px;
+  position: relative;
+  border-radius: 0;
+}
+.input-group-btn-vertical > .btn:first-child {
+  border-top-right-radius: 4px;
+}
+.input-group-btn-vertical > .btn:last-child {
+  margin-top: -2px;
+  border-bottom-right-radius: 4px;
+}
+.input-group-btn-vertical i{
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+
+.form-control {
+	height:26px;
+	padding: 4px 5px;
+	font-size: 11px;
+}
+.table .table {
+  	background-color: #000000;	
+}
+.table {
+	margin-bottom: 0px;
+	font-size:11px;
+	color: #8F8F8F;
+}
+.progress {
+	margin-bottom: 0px;
+}
+
+div.img {
+    border: 1px solid #ffffff;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+div.img img {
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ffffff;
+}
+
+div.img a:hover img {
+    border:1px solid #ffffff;
+}
+
+div.desc {
+    text-align: center;
+    font-weight: normal;
+}
+
+#tbAdd, #tbEdit {
+    border: 1px solid black; 
+    background-color: #B3F0FF;
+    color: black;
+    width: 21px;
+    height: 21px;
+    border-radius: 5px;
+    padding: 3px 0px 5px 5px;
+    float: left;
+}
+
+.input-group-addon {
+	float:left;
+	padding: 4px;
+	width: 18px;
+}
+
+#inputDateFrom, #inputDateTo {
+	float: left;
+	width: 119px;
+}
+
+#datetimepicker6 {
+	float: left;
+}
+#datetimepicker7 {
+    float: right;	
+}
